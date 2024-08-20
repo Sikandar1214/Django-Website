@@ -1,0 +1,132 @@
+/* static/admin/css/custom_admin.css */
+
+
+/* General Styles */
+
+body.dashboard {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+}
+
+header#header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#branding {
+    font-size: 1.5em;
+}
+
+#branding #site-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#user-tools {
+    font-size: 0.9em;
+}
+
+#user-tools a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+#user-tools form button {
+    background: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+#user-tools .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.module {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.module table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.module table caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.module table th {
+    text-align: left;
+}
+
+.module table td {
+    padding: 8px;
+}
+
+.module a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.module a:hover {
+    text-decoration: underline;
+}
+
+#content-related {
+    margin-top: 20px;
+}
+
+#content-related .module {
+    background-color: #f8f9fa;
+}
+
+#footer {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.base-svgs {
+    display: none;
+    /* Hide the SVGs by default */
+}

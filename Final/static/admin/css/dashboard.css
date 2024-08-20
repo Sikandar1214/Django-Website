@@ -1,0 +1,147 @@
+/* static/admin/css/dashboard.css */
+
+
+/* General Styles */
+
+body.dashboard {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header#header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px 8px 0 0;
+}
+
+#branding {
+    font-size: 1.5em;
+}
+
+#branding #site-name a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#user-tools {
+    font-size: 0.9em;
+}
+
+#user-tools a {
+    color: #f8f9fa;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+#user-tools a:hover {
+    text-decoration: underline;
+}
+
+#user-tools form button {
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#user-tools .theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#main {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    color: #333;
+}
+
+#content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.module {
+    background-color: #e9ecef;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.module table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.module table caption {
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    color: #343a40;
+}
+
+.module table th {
+    text-align: left;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #f1f1f1;
+}
+
+.module table td {
+    padding: 10px;
+}
+
+.module a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.module a:hover {
+    text-decoration: underline;
+}
+
+#content-related {
+    margin-top: 20px;
+}
+
+#content-related .module {
+    background-color: #f8f9fa;
+}
+
+#footer {
+    background-color: #343a40;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.base-svgs {
+    display: none;
+    /* Hide the SVGs by default */
+}

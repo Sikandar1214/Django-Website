@@ -1,0 +1,127 @@
+{% extends 'base.html' %}
+
+{% block title %} About{% endblock title %}
+{% block aboutactive %} active {% endblock aboutactive %}
+{% block body %}
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+    }
+    header {
+        background: #333;
+        color: #fff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #0779e4 3px solid;
+    }
+    header a {
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+    header ul {
+        padding: 0;
+        list-style: none;
+    }
+    header li {
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+    header #branding {
+        float: left;
+    }
+    header #branding h1 {
+        margin: 0;
+    }
+    header nav {
+        float: right;
+        margin-top: 10px;
+    }
+    #showcase {
+        min-height: 400px;
+        background: url('showcase.jpg') no-repeat 0 -400px;
+        text-align: center;
+        color: #fff;
+    }
+    #showcase h1 {
+        margin-top: 100px;
+        font-size: 55px;
+        margin-bottom: 10px;
+    }
+    #showcase p {
+        font-size: 20px;
+    }
+    .main-content {
+        padding: 20px;
+        background: #fff;
+        margin-top: 20px;
+    }
+    .main-content h2 {
+        color: #333;
+    }
+    .main-content p {
+        margin-bottom: 20px;
+    }
+    .main-content .team {
+        display: flex;
+        justify-content: space-between;
+    }
+    .main-content .team .member {
+        width: 30%;
+        padding: 10px;
+        background: #f4f4f4;
+        margin: 10px;
+        text-align: center;
+    }
+    footer {
+        padding: 20px;
+        margin-top: 20px;
+        color: #fff;
+        background-color: #333;
+        text-align: center;
+    }
+</style>
+
+<body>
+
+
+<div class="container">
+    <section class="main-content">
+        <h2>About Us</h2>
+        <p>Welcome to Our Company! We are dedicated to providing the best services and products to our customers. Our mission is to innovate and lead in our industry, ensuring top-notch quality and customer satisfaction.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to deliver exceptional value to our customers by providing high-quality products and services. We strive to exceed expectations and continuously improve our offerings.</p>
+
+        <h2>Our Team</h2>
+        <div class="team">
+            <div class="member">
+                <h3>ME</h3>
+                <p>CEO</p>
+            </div>
+            <div class="member">
+                <h3>ME</h3>
+                <p>CTO</p>
+            </div>
+            <div class="member">
+                <h3>ME</h3>
+                <p>COO</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+
+</body>
+ {% endblock %}

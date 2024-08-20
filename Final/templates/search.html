@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %} Search Results {% endblock title %}
+
+
+
+{% block body %}
+
+<div class="container my-3">
+    <h2>Search results : </h2>
+    {% if allPosts|length < 1 %}
+   <p>No search results</p>
+    Your search query : <b>{{query}}</b> did not match any documents. <br>
+    Suggestions:
+    <ul>
+    <li>Make sure that all words are spelled correctly.</li>
+    <li>Try more general keywords.</li>
+   <li> Try fewer keywords.</li>
+   <li> Try different keywords.</li>
+    </li>
+    </ul>
+
+
+    {% endif %}
+
+    <div class="card-list">
+    {% for post in allPosts %}
+    <a href="/blog/{{post.slug}}" class="card-item">
+      <img src="{{ post.image.url }}" alt="Card Image">
+      <strong class="d-inline-block mb-2 text-primary">Article  by {{post.author}}</strong>
+      <span class="developer">{{ post.title }}</span>
+      <div class="mb-1 text-muted">{{post.datetime}}</div>
+      <h3>{{post.content|safe |truncatewords:10}}</h3>
+      <div class="arrow" >
+        <i class="fas fa-arrow-right card-icon"></i>
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+
+
+
+    </div>
+ {% endblock %}

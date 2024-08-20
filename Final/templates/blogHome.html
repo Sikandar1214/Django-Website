@@ -1,0 +1,257 @@
+{% extends 'base.html' %}
+
+{% block title %} BlogHome {% endblock title %}
+ 
+    {% block js %}
+      <script>
+      let previews=document.getElementsByClassName('preview');
+      Array.from(previews).forEach((element))=>{
+          element.innerHTML=element.innerText;
+      };)
+      
+      {% endblock js %}
+      
+{% block blogactive %} active {% endblock blogactive %} 
+
+
+{% block body %}
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+
+     .hero {
+    position: relative; /* Needed to position child elements */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the background image */
+    height: 500px; /* Adjust height as needed */
+    display: flex; /* Center content horizontally and vertically */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    color: Black; /* Text color for better visibility on the image */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Add text shadow for readability */
+    font-size: 2.5em; /* Adjust text size as needed */
+    padding: 20px; /* Add padding to avoid text touching the edges */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Optional: darken image edges */
+}
+
+
+    body {
+      background: #ecececdb;
+    }
+
+    .card-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      max-width: auto;
+      margin: 100px ;
+      padding: 20px;
+      gap: 10px;
+    }
+
+    .card-list .card-item {
+      background: #fff;
+      padding: 26px;
+      border-radius: 8px;
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.04);
+      list-style: none;
+      cursor: pointer;
+      text-decoration: none;
+      border: 2px solid transparent;
+      transition: border 0.5s ease;
+    }
+
+    .card-list .card-item:hover {
+      border: 2px solid #000;
+    }
+
+    .card-list .card-item img {
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .card-list span {
+      display: inline-block;
+      background: #F7DFF5;
+      margin-top: 32px;
+      padding: 8px 15px;
+      font-size: 0.75rem;
+      border-radius: 50px;
+      font-weight: 600;
+    }
+
+    .card-list .developer {
+      background-color: #F7DFF5;
+      color: #B22485;
+    }
+
+    .card-list .designer {
+      background-color: #d1e8ff;
+      color: #2968a8;
+    }
+
+    .card-list .editor {
+      background-color: #d6f8d6;
+      color: #205c20;
+    }
+
+    .card-item h3 {
+      color: #000;
+      font-size: 1.438rem;
+      margin-top: 28px;
+      font-weight: 600;
+    }
+
+    .card-item .arrow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-35deg);
+      height: 40px;
+      width: 40px;
+      color: #000;
+      border: 1px solid #000;
+      border-radius: 50%;
+      margin-top: 40px;
+      transition: 0.2s ease;
+    }
+
+    .card-list .card-item:hover .arrow {
+      background: #000;
+      color: #fff;
+    }
+
+    @media (max-width: 1200px) {
+      .card-list .card-item {
+        padding: 15px;
+      }
+    }
+
+    @media screen and (max-width: 980px) {
+      .card-list {
+        margin: 0 auto;
+      }
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    .hero {
+      background: url('hero-image.jpg') no-repeat center center/cover;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 4em;
+      margin: 0;
+    }
+
+    .hero p {
+      font-size: 1.5em;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 20px auto;
+    }
+
+    .carousel-item img {
+      width: 100%;
+      height: 50%;
+      object-fit: content !important;
+    }
+
+    .carousel-inner {
+      height: 400px; /* Adjust as needed */
+    }
+  .category{
+
+    text-align: left;
+    text-size-adjust: initial;
+
+    background: #fff;
+    max-width: 1200px;
+    margin: 20px auto;
+    font-size: x-large;
+    overflow: hidden;
+    width: 100%;
+    text-emphasis-color:initial;
+  }
+
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 18rem;
+      margin: 5px;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 2px solid #f4f4f4;
+    }
+
+    .card-title {
+      margin: 10px 0;
+    }
+
+    .card-text {
+      color: #555;
+    }
+
+    .cards-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    .footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    .footer p {
+      margin: 0;
+    }
+  </style>
+  <div class="container my-3">
+    <h2>Coding Articles by BlogSpot</h2>
+    <div class="card-list">
+        {% for post in alll %}
+        <a href="/blog/{{ post.slug }}" class="card-item">
+            {% comment %} <img src="{{ post.image.url }}" alt="Card Image"> {% endcomment %}
+            <span class="developer">{{ post.title }}</span>
+            <h3>{{ post.content|safe|truncatewords:10 }}</h3>
+            <div class="arrow">
+                <i class="fas fa-arrow-right card-icon"></i>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
